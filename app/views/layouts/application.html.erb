@@ -40,7 +40,7 @@
                 <li><%= link_to "Link1", "/path1"  %></li>
                 <li><%= link_to "Link2", "/path2"  %></li>
                 <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
+            
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -61,7 +61,7 @@
                     <li><%= link_to "Link1", "/path1"  %></li>
                     <li><%= link_to "Link2", "/path2"  %></li>
                     <li><%= link_to "Link3", "/path3"  %></li>
-                </ul>
+                 <li class="<%= controller.controller_path == 'home' ? 'active' : '' %>"><a href="<%= home_path %>">Homes</a></li> <li class="<%= controller.controller_path == 'profile' ? 'active' : '' %>"><a href="<%= profile_path %>">Profiles</a></li></ul>
             </div>
            </div>
           </div>
