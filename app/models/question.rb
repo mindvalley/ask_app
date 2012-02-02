@@ -6,6 +6,8 @@ class Question
   field :answer, type: String
   field :rating, type: Integer
 
+  validates_presence_of :body
+
   embedded_in :profile
 
 end

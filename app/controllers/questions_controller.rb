@@ -8,8 +8,7 @@ class QuestionsController < ApplicationController
       if @question.save
         format.js
       else
-        format.html { render action: "new" }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
+        format.js { render :error, locals:{errors: @question.errors.full_messages.join(' '), status: 400} }
       end
     end
 

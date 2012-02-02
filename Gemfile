@@ -38,9 +38,9 @@ gem 'jquery-rails'
 
 gem 'mongoid'
 gem 'bson_ext'
-
-gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
-
 gem 'devise'
-
 gem 'mongoid_slug'
+gem 'girl_friday'
+platforms :jruby do
+  gem 'trinidad'
+end
