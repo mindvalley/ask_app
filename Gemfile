@@ -42,5 +42,6 @@ gem 'devise'
 gem 'mongoid_slug'
 gem 'girl_friday'
 platforms :jruby do
-  gem 'trinidad'
+  gem 'kirk'
+  gem 'jruby-openssl'
 end

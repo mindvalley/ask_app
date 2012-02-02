@@ -2,7 +2,9 @@
   <div class="span6 offset3">
     <ul class="thumbnails">
       <% @profiles.each do |profile| %>
-        <li class="thumbnail"><%= link_to(image_tag(profile.avatar_url, width: 60), profile_path(profile)) %></li>
+        <li class="thumbnail">
+          <%= link_to_unless_current(image_tag(profile.avatar_url, width: 60, height: 82), profile_path(profile)) %>
+        </li>
       <% end %>
     </ul>
   </div>
@@ -16,10 +18,10 @@
       </p>
     <% end %>
   </div>
-  <div class="span1">
-    <%= image_tag(@profile.avatar_url, :class => "thumbnail mugshot" )%>
-  </div>
-  <div class="span3">
-    <%= @profile.description %>
+  <div class="span4">
+    <div class="well">
+      <%= image_tag(@profile.avatar_url, :class => "thumbnail mugshot", width: 80 )%>
+      <p><%= @profile.description %></p>
+    </div>
   </div>
 </div>
