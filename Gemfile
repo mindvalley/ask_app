@@ -38,3 +38,5 @@ gem 'jquery-rails'
 
 gem 'mongoid'
 gem 'bson_ext'
+
+gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
