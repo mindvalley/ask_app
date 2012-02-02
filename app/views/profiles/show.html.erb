@@ -2,7 +2,7 @@
   <div class="span6 offset3">
     <ul class="thumbnails">
       <% @profiles.each do |profile| %>
-        <li class="span1"><%= link_to(image_tag(profile.avatar_url), profile_path(profile)) %></li>
+        <li class="span1"><%= link_to(image_tag(profile.avatar_url, width: 60, height: 80), profile_path(profile)) %></li>
       <% end %>
     </ul>
   </div>
@@ -17,12 +17,9 @@
     <% end %>
   </div>
   <div class="span1">
-    <%= image_tag(@profile.avatar_url, :class => "thumbnail mmugshot" )%>
+    <%= image_tag(@profile.avatar_url, :class => "thumbnail mugshot" )%>
   </div>
   <div class="span3">
     <%= @profile.description %>
   </div>
-</div>
-
-<div class="row">
 </div>
