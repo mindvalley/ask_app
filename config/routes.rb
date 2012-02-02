@@ -1,4 +1,5 @@
 AskApp::Application.routes.draw do
+
   get "home/index", as: :home
 
   devise_for :users

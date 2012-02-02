@@ -1,12 +1,16 @@
-
 <div class="row">
   <div class="span8">
-    &nbsp;
-  </div>
-  <div class="span1">
-    <%= image_tag(@profile.avatar_url, class: "thumbnail mmugshot" )%>
-  </div>
-  <div class="span3">
-    <%= @profile.description %>
-  </div>
-</div>
+    <%= form_for([@profile, @profile.questions.new], remote: true) do |f| %>
+      <%= f.text_area :body, rows: 12, class: "question body" %>
+        <p>
+          <%= link_to "<i class='icon-comment icon-white'></i> Ask #{@profile.name}".html_safe, '#', class: 'btn btn-primary' %>
+          </p>
+        <% end %>
+      </div>
+      <div class="span1">
+        <%= image_tag(@profile.avatar_url, class: "thumbnail mmugshot" )%>
+        </div>
+        <div class="span3">
+          <%= @profile.description %>
+        </div>
+      </div>
