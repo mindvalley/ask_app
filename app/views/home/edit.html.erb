@@ -1,4 +1,0 @@
-<%= form_for @home, :url => home_path(@home), :html => { :class => "edit_home", :id => "edit_home" } do |f| -%>
-  <input name="_method" type="hidden" value="put" />
-  <%= render :partial => "form", :locals => {:f => f} %>
-<% end -%>

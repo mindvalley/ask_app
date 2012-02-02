@@ -4,4 +4,7 @@ class Profile
   field :avatar_url, :type => String
   field :title, type: String
   field :description, :type => String
+
+  include Mongoid::Slug
+  slug :name
 end

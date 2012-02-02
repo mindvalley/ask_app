@@ -1,9 +1,12 @@
 AskApp::Application.routes.draw do
   get "home/index", as: :home
 
-  resources :profiles
-
   devise_for :users
+
+  resources :profiles, :path => ''
+  resources :profiles, :path => '', :only => [] do
+    resources :questions
+  end
 
   root to: 'home#index'
 

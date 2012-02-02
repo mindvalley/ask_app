@@ -1,15 +1,12 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Avatar url:</b>
-  <%= @profile.avatar_url %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @profile.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<div class="row">
+  <div class="span8">
+    &nbsp;
+  </div>
+  <div class="span1">
+    <%= image_tag(@profile.avatar_url, class: "thumbnail mmugshot" )%>
+  </div>
+  <div class="span3">
+    <%= @profile.description %>
+  </div>
+</div>
