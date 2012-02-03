@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        EMAIL_QUEUE << {email: @profile.email, body: @question.body}
+        EMAIL_QUEUE << {email: @profile.email, body: @question.body, name: @profile.name}
         format.js
       else
         format.js { render :error, locals:{errors: @question.errors.full_messages.join(' '), status: 400} }

@@ -1,10 +1,13 @@
 body {
     background: url('/images/wood.png');
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 
 textarea.question.body {
-    font-size: 16px;
-    width: 100%;
+    font-size: 18px;
+    width: 744px;
+    font-family: 'Duru Sans', sans-serif;
+    padding: 16px 18px;
 }
 
 li.thumbnail {
@@ -15,4 +18,10 @@ img.thumbnail.mugshot {
     background: white;
     float: left;
     margin-right: 12px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.well p.description {
+    margin-left: 102px;
 }
