@@ -5,9 +5,10 @@ body {
 
 textarea.question.body {
     font-size: 18px;
-    width: 744px;
+    width: 100%;
     font-family: 'Duru Sans', sans-serif;
-    padding: 16px 18px;
+    box-sizing: border-box;
+    padding: 12px;
 }
 
 li.thumbnail {
@@ -18,10 +19,14 @@ img.thumbnail.mugshot {
     background: white;
     float: left;
     margin-right: 12px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     margin-top: 6px;
 }
 
 .well p.description {
     margin-left: 102px;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.well .blurb {
 }

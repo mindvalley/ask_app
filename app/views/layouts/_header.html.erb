@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="well span8 offset2">
+    <p class="blurb">
+      At Mindvalley, we practice transparency and candor.
+      So, if you have got questions, we will share our thoughts with you openly during Tuesday's Awesomeness Report.
+      All entries are 100% anonymous.
+      No login is required to submit your questions and only the person that you ask directly will be notified of your question.
+      So... don't hold back... ask your question now by choosing anyone from Mindvalley's leadership team below.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="span6 offset3">
+    <ul class="thumbnails">
+      <% @profiles.each do |profile| %>
+        <li class="thumbnail">
+          <%= link_to(image_tag(profile.avatar_url, width: 60, height: 82),
+            profile_path(profile),
+            rel: 'popover',
+            :'data-original-title' => profile.name,
+            :'data-content' => profile.description)
+        %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

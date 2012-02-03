@@ -44,4 +44,6 @@ gem 'girl_friday'
 platforms :jruby do
   gem 'kirk'
   gem 'jruby-openssl'
+  gem 'therubyrhino'
 end
+gem 'pjax_rails'

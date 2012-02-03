@@ -46,7 +46,10 @@
         <div class="content">
           <div class="row">
             <div class="span12">
-              <%= yield %>
+              <%= render partial: "layouts/header.html" %>
+              <div data-pjax-container>
+                <%= yield %>
+              </div>
             </div>
           </div>
         </div>
