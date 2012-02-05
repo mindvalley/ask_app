@@ -68,7 +68,7 @@ class ProfilesController < ApplicationController
   private
 
   def load_profile
-    @profile = Profile.find_by_slug(params[:id])
+    @profile = Profile.find_by_slug(params[:id].downcase)
   end
 
 end
