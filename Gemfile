@@ -46,4 +46,7 @@ platforms :jruby do
   gem 'jruby-openssl'
   gem 'therubyrhino'
 end
+platforms :ruby do
+  gem 'therubyracer'
+end
 gem 'pjax_rails'

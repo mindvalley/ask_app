@@ -5,7 +5,11 @@
         <%= f.text_area :body, rows: 20, :class => "question body span8", placeholder: "Hey #{@profile.name}, I'd like to know ..." %>
       </div>
       <p>
-        <%= link_to "<i class='icon-comment icon-white'></i> Ask #{@profile.name}".html_safe, '#', :class => 'btn btn-primary submit question' %>
+        <%= link_to "<i class='icon-comment icon-white'></i> Ask #{@profile.name}".html_safe,
+          '#thankyou_modal',
+          :class => 'btn btn-primary submit question',
+          :'data-toggle' => 'modal' 
+      %>
       </p>
     <% end %>
   </div>
@@ -15,5 +19,18 @@
       <h3><%= @profile.name %></h3>
       <p class="description"><%= @profile.description %></p>
     </div>
+  </div>
+</div>
+<div id="thankyou_modal" class="modal hide fade" style="display: none">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Ask@Mindvalley</h3>
+  </div>
+  <div class="modal-body">
+    <h1>Thanks for asking!</h1>
+    <p>Your question has been anonymously emailed to <%= @profile.name %></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
   </div>
 </div>
