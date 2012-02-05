@@ -9,6 +9,9 @@ textarea.question.body {
     font-family: 'Duru Sans', sans-serif;
     box-sizing: border-box;
     padding: 12px;
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    box-shadow: 0 8px 6px -6px #666;
 }
 
 li.thumbnail {
@@ -23,9 +26,21 @@ img.thumbnail.mugshot {
     margin-top: 6px;
 }
 
+li.thumbnail {
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    box-shadow: 0 8px 6px -6px #666;
+}
+
 .well p.description {
     margin-left: 102px;
     font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.well {
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    box-shadow: 0 8px 6px -6px #666;
 }
 
 .well .blurb {
