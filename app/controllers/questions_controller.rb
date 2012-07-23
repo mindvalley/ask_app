@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
         msg = {email: @profile.email, body: @question.body, name: @profile.name}
         QuestionMailer.send_question(msg).deliver
         unless msg[:email] == 'vishen@mindvalley.com'
-          QuestionMailer.send_question(email: 'tristan+vishen@mindvalley.com',
+          QuestionMailer.send_question(email: 'vishen@mindvalley.com',
             subject: "[Ask@Mindvalley] Someone asked #{msg[:name]} a question ...",
             body: @question.body).deliver
         end
