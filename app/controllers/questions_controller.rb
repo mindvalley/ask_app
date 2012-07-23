@@ -6,7 +6,11 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        EMAIL_QUEUE << {email: @profile.email, body: @question.body, name: @profile.name}
+        msg = {email: @profile.email, body: @question.body, name: @profile.name}
+        QuestionMailer.send_question(msg).deliver
+        unless msg[:email] == 'vishen@mindvalley.com'
+          mail(to: 'vishen@mindvalley.com', subject: "[Ask@Mindvalley] Someone asked #{msg[:name]} a question ...")
+        end
         format.js
       else
         format.js { render :error, locals:{errors: @question.errors.full_messages.join(' '), status: 400} }

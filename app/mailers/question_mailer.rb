@@ -6,9 +6,6 @@ class QuestionMailer < ActionMailer::Base
     @body = msg[:body]
     @name = msg[:name]
     mail(to: @email, subject: '[Ask@Mindvalley] Someone asked you a question ...')
-    unless @email == 'vishen@mindvalley.com'
-      mail(to: 'vishen@mindvalley.com', subject: "[Ask@Mindvalley] Someone asked #{@name} a question ...")
-    end
     puts "question sent to #{@email}"
   end
 end
