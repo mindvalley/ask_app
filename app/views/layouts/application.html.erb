@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>AskMindvalley</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="en">
+  <head>
+    <title>Ask@Mindvalley</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id='header'>
+      <a id='logo' href='http://www.mindvalley.com'><span id='ask'>ASK@</span><img src='/assets/logo-mindvalley.png' /></a>
+    </header>
+    <% unless flash[:notice].blank? %>
+      <% @class = 'show'%>
+    <% else %>
+      <% @class = 'hide'%>
+    <% end %>
+    <div id="notification" class="<%= @class %>">
+      <p id="notification_text" class="notification_text"><%=flash[:notice]%>
+      <span id="close">x</span>
+      </p>
+    </div>
+    <% unless controller.action_name == "new" %>
+      <div class="nav askquestion">
+        <ul>
+            <li>
+              <%= link_to 'Ask Question', new_question_path, id: "nav-askquestion" %>
+            </li>
+        </ul>
+      </div>
+    <% end %>
+    <%= yield %>
+<!--     <div class="nopadding avgrund-contents">
+      <div class="row-fluid">
+        <div class="span12">
+          <div id='header'>
+            <div class='left logo'>
+              <a id='logo' href='http://www.mindvalley.com'><span id='ask'>ASK@</span><img src='/assets/logo-mindvalley.png' /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Explorer canvas, for IE6-8 support of canvas elements -->
+    <!--[if lt IE 9]>
+        <script src="js/excanvas.min.js"></script>
+    <![endif]-->
+    <footer>
+      <%#= render "layouts/footer" %>
+    </footer>
+  </body>
 </html>
+

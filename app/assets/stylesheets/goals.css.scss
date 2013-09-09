@@ -1,0 +1,146 @@
+// Place all the styles related to the goals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+	margin: 5px 0 5px;
+}
+.container.growth{
+}
+textarea {
+	margin-left: 40px !important;
+	width: 400px;
+	height: 20px;
+}
+ul.actions > li {
+	display: block;
+}
+.goal-item {
+}
+.action-container{
+	float: right;
+}
+h2.title{
+	display: inline;
+}
+a.load-form-link{
+	float: right;
+}
+#logo {
+	text-decoration: none;
+	color: white;
+}
+#ask {
+	margin-left: 15px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.askquestion {
+	float: right;
+	margin-right: 20px;
+	margin-top: -15px;
+}
+.nav {
+	font-size: 125%;
+}
+.nav li {
+	background: #777777;
+	display: block;
+	float: left;
+	padding: 5px 9px;
+}
+.nav li:hover {
+	background: orange;
+}
+.nav a:hover {
+	text-decoration: none;
+	color: white;
+}
+#header > a > img {
+	margin-left: 0px;
+}
+.user-action-time {
+	float: right;
+	margin-right: 20px;
+	color: gray;
+}
+.vote {
+	text-align: center;
+}
+.question-page .vote-count-post, .review-task-page .vote-count-post {
+	padding-top: 2px;
+	color: #555;
+}
+.vote span {
+	display: block;
+	color: #808185;
+	font-weight: normal;
+}
+
+.vote-up-off {
+	background-image: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=6');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-position: 0px -265px;
+	display: block;
+	margin: 0 auto;
+	width: 41px;
+	height: 25px;
+	cursor: pointer;
+	text-indent: -9999em;
+	font-size: 1px;
+}
+.vote span {
+	display: block;
+	color: #808185;
+	font-weight: normal;
+}
+.vote-count-post {
+	display: block;
+	font-size: 24px;
+}
+.vote-down-off {
+	background-position: 0px -300px;
+	text-indent: -9999em;
+	font-size: 1px;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	width: 41px;
+	height: 25px;
+	background-image: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=6');
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.separator {
+	border-bottom: 1px solid gray;
+}
+.left210 {
+	margin-left: 210px;
+}
+hr {
+	border-bottom: 1px solid gray;
+}
+.even {
+	background-color: #ddd;
+}
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+#notification {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+#notification {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+#close {
+	float: right;
+	color: gray;
+	cursor: pointer;
+	margin-right: 5px;
+}

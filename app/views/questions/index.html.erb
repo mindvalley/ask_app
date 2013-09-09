@@ -1,0 +1,34 @@
+<h1 class='left15px'>Top Questions</h1>
+
+<table class='left210'>
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr class='<%= cycle("even", "odd")%>'>
+        <td class="votecell">
+          <div class="vote">
+            <input type="hidden" name="_id_" value="18685859">
+            <%= link_to "up vote", polls_create_path(question_id: question.id), method: "post", class: "vote-up-off", title: "This question shows research effort; it is useful and clear" %>
+            <span class="vote-count-post "><%=get_vote_count(question)%></span>
+            <%= link_to "down vote", polls_destroy_path(question_id: question.id), method: "delete", class: "vote-down-off", title: "This question does not show any research effort; it is unclear or not useful" %>
+          </div>
+        </td>
+
+        <td class="postcell">
+          <div>
+            <div class="post-text" itemprop="description">
+              <p>
+                <%= question.body %>
+              </p>
+            </div>
+            <div class="post-taglist">
+              <div class="user-action-time">
+                asked <span title="<%= question.created_at %>" class="relativetime"><%= question.created_at %></span>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr />

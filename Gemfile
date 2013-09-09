@@ -31,7 +31,18 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+gem 'twitter-bootstrap-rails'
+gem 'mv-standard-app-theme', git: 'git@github.com:mindvalley/mv-standard-app-theme.git'
+gem 'pry'
+gem 'protected_attributes'
+gem 'rails_config'
 
+group :development do
+	gem 'quiet_assets'
+	gem 'localtunnel'
+end
+
+gem 'capistrano'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
