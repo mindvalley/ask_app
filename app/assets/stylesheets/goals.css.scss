@@ -161,3 +161,12 @@ hr {
 	width: 220px;
 	padding: 10px 20px;
 }
+.fields label {
+	display: inline-block;
+}
+.fields textarea {
+	height: 200px;
+}
+#new_question_form {
+	margin-left: 100px;
+}
