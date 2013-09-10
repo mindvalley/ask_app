@@ -83,10 +83,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.0)
-    localtunnel (0.3)
-      json (>= 1.2.4)
-      net-ssh (>= 2.0.22)
-      net-ssh-gateway (>= 1.0.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -114,8 +110,6 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
-    quiet_assets (1.0.2)
-      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-pjax (0.7.0)
       nokogiri (~> 1.5)
@@ -210,12 +204,10 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
-  localtunnel
   mv-standard-app-theme!
   pg
   protected_attributes
   pry
-  quiet_assets
   rails (= 4.0.0)
   rails_admin
   rails_config
