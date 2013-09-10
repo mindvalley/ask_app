@@ -37,11 +37,6 @@ gem 'pry'
 gem 'protected_attributes'
 gem 'rails_config'
 
-group :development do
-	gem 'quiet_assets'
-	gem 'localtunnel'
-end
-
 gem 'capistrano'
 gem 'rails_admin'
 # Use ActiveModel has_secure_password
