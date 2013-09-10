@@ -57,4 +57,4 @@ production:
   database: ask_mindvalley
   pool: 5
   username: mvdev
-  password: mvdev
+  password: m1ndva113y

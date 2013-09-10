@@ -19,8 +19,11 @@ class PollsController < ApplicationController
 		@poll = Poll.where(question_id: params[:question_id], voter_id: @current_user.id).first
 		if @poll
 			@poll.destroy
+			@message = "You have successfully cancelled your vote for this quesiton"
+		else
+			@message = "You dont have vote for this question"
 		end
-		redirect_to questions_path, :notice => "You have successfully cancelled your vote for this quesiton"
+		redirect_to questions_path, :notice => @message
 	end
 
 	private

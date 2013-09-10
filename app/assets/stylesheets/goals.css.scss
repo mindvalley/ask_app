@@ -78,10 +78,10 @@ a.load-form-link{
 }
 
 .vote-up-off {
-	background-image: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=6');
+	background-image: url('sprite_arrow.png');
 	background-repeat: no-repeat;
 	overflow: hidden;
-	background-position: 0px -265px;
+	background-position: 0px 4px;
 	display: block;
 	margin: 0 auto;
 	width: 41px;
@@ -100,7 +100,7 @@ a.load-form-link{
 	font-size: 24px;
 }
 .vote-down-off {
-	background-position: 0px -300px;
+	background-position: 0px -18px;
 	text-indent: -9999em;
 	font-size: 1px;
 	cursor: pointer;
@@ -108,7 +108,7 @@ a.load-form-link{
 	margin: 0 auto;
 	width: 41px;
 	height: 25px;
-	background-image: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=6');
+	background-image: image-url('sprite_arrow.png');
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
@@ -143,4 +143,21 @@ hr {
 	color: gray;
 	cursor: pointer;
 	margin-right: 5px;
+}
+.sortable {
+	border: 1px solid gray;
+}
+.sortable_heading {
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+#most_voted {
+	width: 115px;
+}
+#sign_in_form {
+	margin-left: 600px;
+	border: 1px solid gray;
+	width: 220px;
+	padding: 10px 20px;
 }

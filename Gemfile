@@ -43,6 +43,7 @@ group :development do
 end
 
 gem 'capistrano'
+gem 'rails_admin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -54,3 +55,6 @@ gem 'capistrano'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem "devise"

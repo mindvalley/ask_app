@@ -1,4 +1,8 @@
 AskMindvalley::Application.routes.draw do
+  
+  
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   post "polls/create", as: :polls_create
   delete "polls/destroy", as: :polls_destroy
   resources :questions

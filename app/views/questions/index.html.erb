@@ -1,6 +1,10 @@
 <h1 class='left15px'>Top Questions</h1>
 
-<table class='left210'>
+<table class='mws-table left210'>
+  <thead class='sortable'>
+    <th id="most_voted" class=''>Most Voted</td>
+    <th class=''><span class='sortable_heading'>Date</span></td>
+  </thead>
   <tbody>
     <% @questions.each do |question| %>
       <tr class='<%= cycle("even", "odd")%>'>

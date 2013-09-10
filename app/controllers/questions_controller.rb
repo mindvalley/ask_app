@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  http_basic_authenticate_with name: 'furqan', password: 'mind1furqan'
+  http_basic_authenticate_with name: Settings.http.login, password: Settings.http.password
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
