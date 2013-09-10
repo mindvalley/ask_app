@@ -15,8 +15,8 @@ set :repository,  "git@github.com:mindvalley/ask_app.git"
 
 # set :branch, "staging"
 
-set :stages, %w(production rails4)
-set :default_stage, "rails4"
+set :stages, %w(production staging)
+set :default_stage, "staging"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
