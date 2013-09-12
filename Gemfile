@@ -37,7 +37,9 @@ gem 'pry'
 gem 'protected_attributes'
 gem 'rails_config'
 
-gem 'capistrano'
+group :development do 
+	gem 'capistrano'
+end
 gem 'rails_admin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
