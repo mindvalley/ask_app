@@ -46,6 +46,7 @@ gem 'rails_admin'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'rvm-capistrano'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
