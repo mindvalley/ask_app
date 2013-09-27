@@ -7,5 +7,6 @@ $(document).ready(function(){
 	$('#close').click(function(){
 		$("#notification").hide('slow');
 	});
-	$(".mws-table").tablesorter({textExtraction: myTextExtraction});
+	$(".mws-table").tablesorter({headers: { 0: { textExtraction: myTextExtraction } }})
+	// $(".mws-table").tablesorter({textExtraction: myTextExtraction});
 });
