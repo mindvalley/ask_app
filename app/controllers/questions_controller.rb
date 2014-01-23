@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.order("created_at DESC")
+    @questions = Question.where(archive: false).order("created_at DESC")
   end
 
   # GET /questions/1
